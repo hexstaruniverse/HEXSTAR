@@ -12,7 +12,7 @@ const Navbar = () => {
         </ul>
         <div className="col-span-1 flex justify-evenly items-center md:justify-center md:gap-5 md:col-span-2 ">
             <button className='hidden md:inline'>Login</button>
-            <button className='px-3 capitalize text-xs bg-[#6637ED] h-9 rounded-md md:text-base '>become an instructor</button>
+            <button className='px-3 capitalize text-xs bg-[#6637ED] h-10 rounded-md md:text-base '>become an instructor</button>
             <button className='text-3xl md:hidden'><GiHamburgerMenu/></button>
         </div>
     </nav>
