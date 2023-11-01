@@ -21,5 +21,7 @@
 @layer base{
   html{
     font-family: 'Questrial', sans-serif;
-  }
+    height: auto;
+    background: #1c1c1c;
+    }
 }
