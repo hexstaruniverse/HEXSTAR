@@ -3,7 +3,7 @@ import {FaLinkedinIn} from 'react-icons/fa';
 
 const signup = () => {
   return (
-    <div className='mt-16 h-screen bg-center bg-cover bg-[#1e1e1e] text-white flex flex-col gap-10 items-center' style={{
+    <div className='mt-10 md:mt-16 h-screen bg-center bg-cover bg-[#1e1e1e] text-white flex flex-col gap-10 items-center' style={{
       backgroundImage: `url('/signup-grid.svg')`,
     }}>
       <div>
