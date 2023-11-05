@@ -13,6 +13,8 @@ module.exports = {
       },
       backgroundImage: {
         'whiteSquareFrame': "url('/whiteSquareFrame.svg')",
+        'homeWhiteSquareFrame': "url('/homeWhiteSquareFrame.svg')",
+        'homeWhiteFrame': "url('/homeWhiteFrame.svg')",
         'blackSquareFrame': "url('/blackSquareFrame.svg')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',

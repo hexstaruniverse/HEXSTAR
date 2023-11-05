@@ -74,7 +74,7 @@ export default function Institution() {
           <Program className="hidden md:flex bg-[#FEFEFE] text-black" image="spaceshipLarge.svg" alt="spaceshipLarge" text="Aerospace" urlText="All Programs&gt;&gt;"/>
         </div>
         <Image
-              className="w-1/3 z-[-1] h-1/2 min-md:hidden absolute bottom-0 mb-[-6rem] ml-[-2rem] left-0"
+              className="w-1/3 z-[-1] h-1/2 max-md:hidden absolute bottom-0 mb-[-6rem] ml-[-2rem] left-0"
               width={0}
               height={0}
               src="1percent.svg"
