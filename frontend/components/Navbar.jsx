@@ -4,7 +4,7 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 import Button from './Button'
 const Navbar = () => {
   return (
-    <nav className=' bg-[#1E1E1E] text-white h-20 grid grid-cols-2 justify-between items-center md:grid-cols-6'>
+    <nav className=' text-white h-20 grid grid-cols-2 justify-between items-center md:grid-cols-6'>
         <img className='col-span-1 ml-4 w-20 lg:w-24 lg:ml-14' src="logo.svg" alt="hexstar universe" />
         <ul className='col-span-3 capitalize space-x-7 items-center hidden md:flex flex-row'>
             <li >all program</li>
