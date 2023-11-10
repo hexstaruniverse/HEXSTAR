@@ -6,7 +6,7 @@ import {RiTwitterXFill} from 'react-icons/ri';
 
 const footer = () => {
   return (
-    <footer className='h-1/2 mx-4 md:mx-16  bg-[#1e1e1e] text-white'>
+    <footer className='h-1/2 mx-4 md:mx-16   text-white'>
       <div className='capitalize leading-9 mb-16 gap-6 grid md:grid-cols-custom '>
         <div className='md:col-span-8 mb-5 flex flex-col gap-10 '>
           <div className="logo flex gap-5">
