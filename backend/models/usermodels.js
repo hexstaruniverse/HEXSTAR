@@ -86,7 +86,7 @@ userSchema.statics.signup = async function(email, name, password) {
     from: process.env.USER,
     to: email,
     subject: process.env.VERIFY_SUBJECT,
-    text: `Hi ${firstname},\n\nthank you for Signing up with Hex-Star Universe.\nClick on the link to successfully login - ${'http://localhost:8888/api/user/login'}`
+    text: `Hi ${firstname},\n\nthank you for Signing up with Hex-Star Universe.Hope you will have a great time with us while exploring the mystries of cosmos`
     };
 
     transporter.sendMail(mailOptions, function(error, info){
