@@ -11,14 +11,24 @@ const signup = () => {
   const [showPassword, setShowPassword] = useState(false);
   const submitHandler = async (e) => {
     e.preventDefault()
-   
-      const register = await axios.post('/api/users/register', {
+    try{
+      const register = await axios.post('https://hsu-2-0-backend.vercel.app/api/users/login', {
         email,
         password,
       })
-      if(register){
-        localStorage.setItem('userInfo', JSON.stringify(register.data));
-      }
+    }catch(error){
+      toast.error('login failed',
+        {
+          position:"top-right",
+          autoclose:5000,
+          hideProgressBar:false,
+          closeOnClick:true,
+          draggable:true,
+          progress:undefined,
+          theme:"light",
+        }
+      )
+    }
   }
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword)

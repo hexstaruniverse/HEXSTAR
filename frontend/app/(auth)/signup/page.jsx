@@ -3,31 +3,42 @@ import {FcGoogle} from 'react-icons/fc';
 import {FaEye, FaEyeSlash, FaLinkedinIn} from 'react-icons/fa';
 import { useState } from 'react'
 import axios from 'axios'
+import {useRouter} from 'next/navigation'
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 const signup = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [fullName, setFullName] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('')
+  const router = useRouter();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [fullName, setFullName] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword)
+    setShowPassword(!showPassword);
   }
 
   const submitHandler = async (e) => {
     e.preventDefault()
-    if (password !== confirmPassword) {
-      alert('Passwords do not match')
-    } else {
-      const register = await axios.post('/api/users/register', {
-        name: fullName,
-        email,
-        password,
-      })
+    try {
+      if (password !== confirmPassword) {
+        alert('Passwords do not match');
+      } else {
+        const register = await axios.post('https://hsu-2-0-backend.vercel.app/api/users/signup', {
+          name: fullName,
+          email,
+          password,
+        })
+        console.log(register);
+        router.push('/login');
+
+      }
+      
+    } catch (error) {
+      console.log(error);
     }
-    if(register){
-      localStorage.setItem('userInfo', JSON.stringify(register.data));
-    }
+   
   }
   return (
     <div className='mt-10 md:mt-16 h-screen bg-center bg-cover bg-[#1e1e1e] text-white flex flex-col gap-10 items-center' style={{
@@ -65,6 +76,7 @@ const signup = () => {
           <button className='p-2 rounded-md border border-[#d9d9d9] md:px-4'>Sign Up with <FaLinkedinIn className='inline text-sm p-0.5 rounded-sm bg-blue-600 text-white'/></button>
           </div>
       </div>
+      <ToastContainer />
     </div>
   )
 }
