@@ -7,6 +7,18 @@ import {useRouter} from 'next/navigation'
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
+// const response = await fetch(url, {
+//   method: "POST", 
+//   mode: "cors", 
+//   cache: "no-cache", 
+//   credentials: "same-origin",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   redirect: "follow", // manual, *follow, error
+//   referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+//   body: JSON.stringify(data), // body data type must match "Content-Type" header
+// });
 
 const signup = () => {
   const router = useRouter();
@@ -25,12 +37,24 @@ const signup = () => {
       if (password !== confirmPassword) {
         alert('Passwords do not match');
       } else {
-        const register = await axios.post('https://hsu-2-0-backend.vercel.app/api/users/signup', {
-          name: fullName,
-          email,
-          password,
-        })
-        console.log(register);
+        const config = {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        };
+        const response = await axios.post(
+         
+          "https://hsu-2-0-backend.vercel.app/api/user/signup",
+          {
+            name:fullName,
+            email,
+            password,
+          },
+          config
+        );
+
+        console.log(response);
         router.push('/login');
 
       }

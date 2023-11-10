@@ -9,7 +9,7 @@ const cors = require('cors')
 const app = express()
 
 //cors 
-app.use(cors({}))
+
 
 //middleware to access request body
 app.use(express.json())
@@ -19,6 +19,21 @@ app.use((req, res, next) => {
     next()
 })
 
+const allowedOrigins = [
+    "http://localhost:3000",
+];
+
+app.use(cors({
+    origin:function(origin,callback){
+        if(allowedOrigins.indexOf(origin)!== -1 || !origin){
+            callback(null,true);
+        }
+        else{
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials:true,
+}))
 //routes
 app.use('/api/user', userRoutes)
 
