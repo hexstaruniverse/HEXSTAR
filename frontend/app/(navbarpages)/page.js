@@ -1,8 +1,34 @@
 import Image from "next/image"
 import Program from '@/components/Program.jsx'
+import MentorBlack from '@/components/MentorBlack.jsx'
+import MentorWhite from '@/components/MentorWhite.jsx'
+import Carousel from '@/components/Carousel.jsx'
 export default function Home() {
   return (
     <div>
+        <Carousel className="bg-[#6637ED] text-[#FFFFFF] max-md:hidden" slidesToShow={3}>
+              {
+                (() => {
+                  const components = [];
+
+                  for (let i = 0; i < 20; i++) {
+                    components.push(
+                      <div key={i}>
+                        <Image
+                          className="w-fit h-fit"
+                          width={0}
+                          height={0}
+                          src="solidWorks.svg"
+                          alt="solidWorks"
+                        />
+                      </div>
+                    );
+                  }
+
+                  return components;
+                })()
+              }
+        </Carousel>
       <div id="hero" className="flex flex-col md:mt-8 md:flex-row md:justify-between">
         <div className="relative md:w-full md:mt-[-6rem]">
           <Image
@@ -52,7 +78,55 @@ export default function Home() {
         </div>
       </div>
       <div id="workingAt" className="">
-        <h1>They are working at</h1>
+            <h6 className="w-full text-center md:text-xl mb-10 font-normal mt-5 text-[#FFFFFF]">
+                  They are working at
+            </h6> 
+            <Carousel className="max-md:hidden" slidesToShow={10}>
+            {
+                (() => {
+                  const components = [];
+
+                  for (let i = 0; i < 20; i++) {
+                    components.push(
+                      <div key={i}>
+                        <Image
+                          className="w-fit h-fit"
+                          width={0}
+                          height={0}
+                          src="isroLarge.svg"
+                          alt="isroLarge"
+                        />
+                      </div>
+                    );
+                  }
+
+                  return components;
+                })()
+              }
+            </Carousel>
+            <Carousel className="md:hidden" slidesToShow={4}>
+            {
+                (() => {
+                  const components = [];
+
+                  for (let i = 0; i < 20; i++) {
+                    components.push(
+                      <div key={i}>
+                        <Image
+                          className="w-fit h-fit"
+                          width={0}
+                          height={0}
+                          src="isroLarge.svg"
+                          alt="isroLarge"
+                        />
+                      </div>
+                    );
+                  }
+
+                  return components;
+                })()
+              }
+            </Carousel>
       </div>
       {/*All programs starts*/}
       <div className="relative flex flex-col items-center py-10 mt-8 overflow-hidden md:pb-32 max-md:bg-homeWhiteSquareFrame md:bg-[#FBFBFB]">
