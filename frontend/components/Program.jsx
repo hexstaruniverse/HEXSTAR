@@ -10,7 +10,7 @@ export default function Program(props) {
               alt={props.alt}
             />
             <div className="absolute bottom-0 left-5">
-              <h1 className="text-sm font-extrabold md:text-lg w-fit">{props.text}<br/><a className="mt-0 font-extrabold text-xxs md:text-sm w-fit " href="#">{props.urlText}</a></h1>
+              <h1 className="text-sm font-extrabold md:text-lg w-fit">{props.text}<a className="block mt-0 font-extrabold text-xxs md:text-sm w-fit " href="#">{props.urlText}</a></h1>
            </div>
           </div>
   )

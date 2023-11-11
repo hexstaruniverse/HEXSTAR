@@ -3,6 +3,7 @@ import Program from "@/components/Program.jsx";
 import MentorWhite from "@/components/MentorWhite.jsx";
 import MentorBlack from "@/components/MentorBlack.jsx";
 import Carousel from "@/components/Carousel";
+import Review from "@/components/Review";
 export default function Institution() {
   return (
     <div>
@@ -17,17 +18,16 @@ export default function Institution() {
             alt="Frame"
           />
           <div id="content" className="absolute top-1/3 left-10 md:top-1/4">
-            <h1 className="text-2xl md:text-7xl md:leading-snug font-extrabold  text-[#FFFFFF]">
+            <h1 className="text-2xl md:text-7xl leading-snug md:leading-snug font-extrabold mb-3 md:mb-5 text-[#FFFFFF]">
               Pioneering Space <br /> Education for {" "}
               <p className="inline text-[#6637ED]">Institutions</p>
             </h1>
-            <br className="max-md:hidden"/>
-            <h6 className="w-3/4 text-[.45rem] md:text-lg font-extralight text-[#FFFFFF]">
+            {/* <br className="max-md:hidden"/> */}
+            <h6 className="w-3/4 text-xxs mb-2 md:mb-5 md:text-lg font-extralight text-[#FFFFFF]">
               Space is the next frontier, Space industry will grow up to $800
-              billion within next 5 years. Skill up yourself and become industry
-              ready
+              billion within next 5 years. Skill up yourself and become industry ready.
             </h6>
-            <br className="max-md:hidden"/>
+            {/* <br className="max-md:hidden"/> */}
             <button className='px-5 mt-2 capitalize text-xs  bg-[#6637ED] text-[#FFFFFF] font-bold h-7 md:h-12 md:w-44  rounded-md md:text-lg '>Contact Us</button>
           </div>
         </div>
@@ -110,7 +110,7 @@ export default function Institution() {
           <MentorWhite className="hidden md:flex"  mentorImage="mentorLarge.svg" mentorAlt="mentorLarge" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbitallargeWhite.svg" logoAlt="thinkRbitallargeWhite"/> 
           <MentorWhite className="hidden md:flex"  mentorImage="mentorLarge.svg" mentorAlt="mentorLarge" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbitallargeWhite.svg" logoAlt="thinkRbitallargeWhite"/> 
         </div>
-        <div className="text-[#6637ED] text-sm md:text-xl font-extrabold md:hidden"><a>See More -&gt;</a></div>
+        <button className="text-[#6637ED] text-sm md:text-xl font-extrabold md:hidden"><a>See More -&gt;</a></button>
         <Image
               className="w-fit h-fit max-md:hidden"
               width={0}
@@ -121,37 +121,52 @@ export default function Institution() {
       </div>
       {/*Our Mentors Ends*/}
       {/*Student Success Launchpad*/}
-      <div className="relative flex flex-col items-center mt-8">
-      <h1 className="text-2xl md:text-6xl text-center font-extrabold  text-[#FFFFFF]">
-            Student {" "}
+      <div className="relative flex flex-col items-center pb-40 mt-8">
+        <h1 className="text-2xl md:text-6xl text-center font-extrabold pt-10 text-[#FFFFFF]">
+              Student {" "}
               <p className="inline text-[#6637ED]">Success</p>{" "}
-            <br className="md:hidden"/>
-            Launchpad
-        </h1>
-        <Image
-              className="w-fit h-fit md:hidden"
-              width={0}
-              height={0}
-              src="blackRainbow.svg"
-              alt="blackRainbow"
-            />
-       <div className="absolute right-0">
-
-       <Image
-              className="w-fit h-fit md:hidden"
-              width={0}
-              height={0}
-              src="doubleQuotes.svg"
-              alt="doubleQuotes"
-            />
+              <br className="md:hidden"/>
+              Launchpad
+          </h1>
           <Image
-              className="w-fit h-fit max-md:hidden"
-              width={0}
-              height={0}
-              src="doubleQuotesLarge.svg"
-              alt="doubleQuotesLarge"
-            />
-       </div>
+                className="w-fit h-fit max-md:mt-[-4rem] z-[-1] md:hidden"
+                width={0}
+                height={0}
+                src="blackRainbow.svg"
+                alt="blackRainbow"
+              />
+
+           <div className="grid items-center w-2/3 gap-10 md:mt-20 md:w-fit ">
+            {
+                (() => {
+                  const components = [];
+
+                  for (let i = 0; i < 1; i++) {
+                    components.push(
+                      <Review className="md:py-10"/>
+                    );
+                  }
+
+                  return components;
+                })()
+              }
+            </div>
+        <div className="ml-auto">
+        <Image
+                className="w-fit h-fit md:hidden"
+                width={0}
+                height={0}
+                src="doubleQuotes.svg"
+                alt="doubleQuotes"
+              />
+            <Image
+                className="w-2/3 ml-auto h-fit max-md:hidden"
+                width={0}
+                height={0}
+                src="doubleQuotesLarge.svg"
+                alt="doubleQuotesLarge"
+              />
+        </div>
       </div>
 
       
