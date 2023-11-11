@@ -245,7 +245,7 @@ export default function Home() {
       {/*Why Hexstar Universe ends*/}
        {/*Industry Experts */}
        <div className="relative flex flex-col items-center py-10 mt-5"> 
-        <h1 className="text-3xl  md:text-7xl font-extrabold  text-[#FFFFFF] items-start w-full pl-5  py-5 md:pl-10">
+        <h1 className="text-3xl  md:text-7xl font-extrabold  text-[#FFFFFF] items-start w-full pl-5  py-3 md:pl-10">
              Learn from <br className="md:hidden"/> Industry Experts
         </h1> 
         <p  className="text-sm md:text-lg font-extralight text-[#FFFFFF] items-start w-full pl-5 md:pl-10">Learn from who you want to be.Learn from top industry practitioner</p>
@@ -269,7 +269,107 @@ export default function Home() {
         <div className="text-[#6637ED] text-sm md:text-xl font-extrabold md:mt-24"><a>See More -&gt;</a></div>
       </div>
       {/*Industry Experts Ends*/} 
-    
+       {/*Community*/} 
+       <div className="relative flex flex-col items-center pt-10 mt-5">
+        <Image
+              className="absolute md:hidden right-0 top-56 z-[-1] w-fit h-fit"
+              width={0}
+              height={0}
+              src="Group574.svg"
+              alt="Group574"
+            />
+        <Image
+              className="absolute md:hidden left-0 bottom-56 z-[-1] w-fit h-fit"
+              width={0}
+              height={0}
+              src="Group531.svg"
+              alt="Group531"
+            />
+        <Image
+          className="pl-20 mr-auto w-fit h-fit max-md:hidden"
+          width={0}
+          height={0}
+          src="communityExclamation.svg"
+          alt="communityExclamation"
+        />
+        <h1 className="text-3xl flex md:text-7xl font-extrabold justify-between text-[#FFFFFF] items-start w-full pl-5 py-3 md:pl-10">
+              Community
+              <Image
+                className="w-2/5 pt-10 mr-20 h-fit max-md:hidden"
+                width={0}
+                height={0}
+                src="networkSuccess.svg"
+                alt="networkSuccess"
+              />
+        </h1> 
+        <p  className="px-5 text-sm md:text-lg font-extralight text-[#FFFFFF] items-start w-full pl-5 md:pl-10">Network with like minded people, build connections and collaborate</p>
+        <div className="w-full mt-2 max-md:hidden">
+        <Image
+              className="ml-auto mr-20 w-fit h-fit"
+              width={0}
+              height={0}
+              src="star.svg"
+              alt="star"
+            />
+        </div>
+        <div className="grid relativee md:h-fit place-content-center md:w-2/3 md:justify-center md:gap-4 md:grid-rows-3 md:grid-cols-2 md:grid-flow-col max-md:mx-10">
+
+        <div className=" max-md:py-10 md:row-span-2 md:col-span-1"> 
+        <Image
+                className="w-fit h-fit"
+                width={0}
+                height={0}
+                src="videoImage.svg"
+                alt="videoImage"
+              />
+      </div>
+      <div className="relative  md:row-span-1 md:col-span-1 w-full px-5 flex flex-col text-center rounded-lg items-center py-6 border-[#D9D9D9] border-2 bg-[#1B1B1B]"> 
+            
+            <h6 className="text-sm md:text-lg font-extrabold w-fit md:mr-auto md:pl-5 mb-3 text-[#FFFFFF]">
+               Join the community of 10k+ space learners
+            </h6>
+            <h6 className="px-5 text-xs md:text-lg font-extralight  md:mr-auto md:pl-5 text-[#FFFFFF]">
+               Network with like minded people, build connections and friendship that could latt forever
+            </h6>
+           
+      </div>
+      <div className="relative md:row-span-3 md:col-span-1 md:h-full  px-5 w-full max-md:h-56 flex flex-col justify-between rounded-lg items-center py-10 max-md:mt-5 border-[#D9D9D9] border-2"> 
+            <h6 className="ml-4 md:text-xl font-extrabold mr-auto text-[#FFFFFF]">
+                 Be the part of<br/> exceptional journey
+            </h6>
+            <button className='px-5 mt-2 capitalize text-xs flex items-center justify-start bg-[#6637ED] text-[#FFFFFF] font-bold h-7 md:h-12 md:w-44  rounded-md md:text-lg '>
+            <Image
+                className="w-fit h-fit"
+                width={0}
+                height={0}
+                src="discord.svg"
+                alt="discord"
+              />Join Discord</button>
+      </div>
+      </div>
+      <Image
+                className="absolute left-0 bottom-10 w-fit h-1/3 max-md:hidden"
+                width={0}
+                height={0}
+                src="communityGlobeLarge.svg"
+                alt="communityGlobeLarge"
+      />
+      <Image
+                className="w-fit h-fit md:hidden"
+                width={0}
+                height={0}
+                src="blackRainbow.svg"
+                alt="blackRainbow"
+      />
+      <Image
+                className="pb-0 mb-0 w-fit h-fit max-md:hidden"
+                width={0}
+                height={0}
+                src="blackRainbowLarge.svg"
+                alt="blackRainbowLarge"
+      />
+      </div>
+      {/*Community Ends*/}
     </div>
   )
 }
