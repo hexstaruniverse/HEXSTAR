@@ -140,12 +140,18 @@ export default function Home() {
         <h1 className="text-3xl md:text-7xl  text-center font-extrabold md:pt-10 md:pb-4  py-5 text-[#1B1B1B] ">
            All Programs
         </h1>
-        <h6 className="w-3/4 max-md:hidden md:text-lg font-extralight text-[#000000]">
-              Space is the next frontier, Space industry will grow up to $800
-              billion within next 5 years. Skill up yourself and become industry
-              ready
-            </h6>
-        
+        <h6 className="w-3/4 font-normal text-center max-md:hidden md:text-lg">
+              Explore the all programs, skill up and become industry ready
+        </h6>
+        <div className="ml-auto mr-10 max-md:hidden">
+        <Image
+              className="w-3/4 h-fit"
+              width={0}
+              height={0}
+              src="starBlack.svg"
+              alt="starBlack"
+            />
+        </div>
         <div className="grid grid-cols-2 gap-4 my-10 md:mb-28 md:z-10 md:grid-cols-4 md:gap-16 ">
           <Program className="flex md:hidden bg-[#1B1B1B] text-[#FFFFFF] " image="spaceship.svg" alt="spaceship" text="Aerospace" urlText="All Programs&gt;&gt;"/>
           <Program className="flex md:hidden bg-[#1B1B1B] text-[#FFFFFF]" image="spaceship.svg" alt="spaceship" text="Aerospace" urlText="All Programs&gt;&gt;"/>
@@ -204,6 +210,40 @@ export default function Home() {
         
       </div>
       {/*All programs ends*/ }
+      {/*Why Hexstar Universe*/}
+      <div className="flex flex-col items-center mt-8 ">
+        <h1 className="text-3xl md:text-7xl font-extrabold md:pt-20 pb-3 pt-5 text-[#FFFFFF] items-start w-full pl-5 md:pl-10">
+            Why Hexstar <br className="md:hidden"/> Universe{"  "}?
+        </h1>
+        <h6 className="md:text-xl font-semibold md:font-normal text-[#FFFFFF] items-start w-full pl-5 md:pl-10">
+              Worlds first fullstack space edtech <br className="md:hidden"/> platform
+        </h6>
+        <div className="flex justify-between w-full pl-5 mt-2 md:px-10">
+          <Image
+                className="w-fit h-fit md:hidden"
+                width={0}
+                height={0}
+                src="hexstarUniverseImg1.svg"
+                alt="hexstarUniverseImg1"
+              />
+          <Image
+                className="mt-10 mr-20 w-fit h-fit md:hidden"
+                width={0}
+                height={0}
+                src="hexstarUniverseImg2.svg"
+                alt="hexstarUniverseImg2"
+              />
+          <Image
+                className="w-fit h-fit max-md:hidden"
+                width={0}
+                height={0}
+                src="hexstarUniverseLarge.svg"
+                alt="hexstarUniverseLarge"
+              />
+        </div>
+      </div>
+      {/*Why Hexstar Universe ends*/}
+     
     </div>
   )
 }
