@@ -5,7 +5,7 @@ import { FaEyeSlash,FaEye } from 'react-icons/fa';
 import { useState } from 'react'
 import axios from 'axios'
 
-const signup = () => {
+const Signin = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false);
@@ -43,7 +43,7 @@ const signup = () => {
       <div className="border border-[#d9d9d9] p-6 rounded-lg bg-[#1f1f1f]  w-3/4 flex flex-col gap-4 md:w-[400px]" >
         
         <input type="email" className='p-2 bg-transparent border rounded-md' placeholder='Email' onChange={(e)=>setEmail(e.target.value)}/>
-        <div className='relative w-full container'>  
+        <div className='container relative w-full'>  
           <input type={showPassword ? 'text' : 'password'} className='w-full p-2 bg-transparent border rounded-md password-input-wrapper' placeholder='Password' onChange={(e)=>setPassword(e.target.value)}/>
           <button
             className="absolute inset-y-0 right-0 flex items-center px-4 text-white"
@@ -52,15 +52,15 @@ const signup = () => {
             {!showPassword ? <FaEyeSlash /> : <FaEye />}
           </button>
         </div>
-        <div className='flex flex-row justify-between items-center'>
+        <div className='flex flex-row items-center justify-between'>
           <div>
-            <input type="checkbox" className='inline-block  bg-transparent' /> <span className='text-xs md:text-base'>Remember Me</span>
+            <input type="checkbox" className='inline-block bg-transparent' /> <span className='text-xs md:text-base'>Remember Me</span>
           </div>
           <button className='text-xs md:text-base'>Forget Password?</button>
         </div>
         <button className='px-3 capitalize text-base bg-[#6637ED] h-8 rounded-md md:text-lg md:h-10' onClick={submitHandler}>Log In</button>
           <p className='text-xs text-center md:text-sm'>Create a new account? <span className='underline'>Sign up</span></p>
-        <div className='text-xs flex items-center justify-center gap-1 text-center md:text-sm md:gap-8'>
+        <div className='flex items-center justify-center gap-1 text-xs text-center md:text-sm md:gap-8'>
           <button className='p-2 rounded-md border border-[#d9d9d9] md:px-4'>Login with <FcGoogle className='inline'/></button> 
           <span> or </span>
           <button className='p-2 rounded-md border border-[#d9d9d9] md:px-4'>Login with <FaLinkedinIn className='inline text-sm p-0.5 rounded-sm bg-blue-600 text-white'/></button>
@@ -70,4 +70,4 @@ const signup = () => {
   )
 }
 
-export default signup
+export default Signin
