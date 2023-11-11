@@ -2,10 +2,12 @@ import Image from "next/image";
 import Program from "@/components/Program.jsx";
 import MentorWhite from "@/components/MentorWhite.jsx";
 import MentorBlack from "@/components/MentorBlack.jsx";
+import Carousel from "@/components/Carousel";
 export default function Institution() {
   return (
     <div>
       <div id="hero" className="flex flex-col mt-8 md:flex-row md:justify-between">
+        <Carousel/>
         <div className="relative md:w-full ">
           <Image
             className="w-fit h-fit md:hidden"
@@ -59,10 +61,19 @@ export default function Institution() {
         <h1 className="text-3xl  text-center font-extrabold py-5 md:hidden text-[#1B1B1B] ">
            All Programs
         </h1>
-        <h1 className="hidden md:block text-7xl text-center font-extrabold  text-[#FFFFFF] pb-10">
+        <h1 className="hidden md:block text-7xl text-center font-extrabold  text-[#FFFFFF]">
             All {" "}
               <p className="inline text-[#6637ED]">Categories</p>
         </h1>
+        <div className="ml-auto mr-10 max-md:hidden">
+        <Image
+              className="w-3/4 h-fit"
+              width={0}
+              height={0}
+              src="star.svg"
+              alt="star"
+            />
+        </div>
         <div className="grid grid-cols-2 gap-4 my-10 md:grid-cols-4 md:gap-16">
           <Program className="flex md:hidden bg-[#1B1B1B] text-[#FFFFFF] " image="spaceship.svg" alt="spaceship" text="Aerospace" urlText="All Programs&gt;&gt;"/>
           <Program className="flex md:hidden bg-[#1B1B1B] text-[#FFFFFF]" image="spaceship.svg" alt="spaceship" text="Aerospace" urlText="All Programs&gt;&gt;"/>
@@ -74,7 +85,7 @@ export default function Institution() {
           <Program className="hidden md:flex bg-[#FEFEFE] text-black" image="spaceshipLarge.svg" alt="spaceshipLarge" text="Aerospace" urlText="All Programs&gt;&gt;"/>
         </div>
         <Image
-              className="w-1/3 z-[-1] h-1/2 max-md:hidden absolute bottom-0 mb-[-6rem] ml-[-2rem] left-0"
+              className="w-fit z-[-1] h-1/2 max-md:hidden absolute bottom-0 mb-[-7rem] ml-[-2rem] left-0"
               width={0}
               height={0}
               src="1percent.svg"
@@ -84,13 +95,13 @@ export default function Institution() {
       {/*All Programs Ends*/}
 
       {/*Our Mentors*/}
-      <div className="mt-5 md:bg-[#FFFFFF] relative flex flex-col items-center py-10"> 
-        <h1 className="text-2xl md:text-7xl text-center font-extrabold  text-[#FFFFFF] md:text-[#1B1B1B] pb-10">
+      <div className="mt-5 md:bg-[#FFFFFF] relative flex flex-col items-center pt-10"> 
+        <h1 className="text-2xl md:text-7xl text-center font-extrabold  text-[#FFFFFF] md:text-[#1B1B1B] pb-10 md:pb-20">
             Our {" "}
               <p className="inline text-[#6637ED]">Mentors</p>
         </h1> 
-        <p  className="px-5 text-sm md:text-lg font-extralight text-[#FFFFFF]">Learn from who you want to be.Learn from top industry practitioner</p>
-        <div className="grid items-center grid-cols-2 gap-4 m-4 my-5 md:grid-cols-5 md:gap-10">
+        <p  className="px-5 text-sm md:text-lg font-extralight md:hidden text-[#FFFFFF]">Learn from who you want to be.Learn from top industry practitioner</p>
+        <div className="grid items-center grid-cols-2 gap-4 m-4 my-5 md:grid-cols-5 md:gap-10 md:pb-32">
           <MentorBlack className="flex md:hidden"  mentorImage="mentor.svg" mentorAlt="mentor" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbital.svg" logoAlt="thinkRbital"/> 
           <MentorBlack className="flex md:hidden"  mentorImage="mentor.svg" mentorAlt="mentor" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbital.svg" logoAlt="thinkRbital"/> 
           <MentorWhite className="hidden md:flex"  mentorImage="mentorLarge.svg" mentorAlt="mentorLarge" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbitallargeWhite.svg" logoAlt="thinkRbitallargeWhite"/> 
@@ -100,6 +111,13 @@ export default function Institution() {
           <MentorWhite className="hidden md:flex"  mentorImage="mentorLarge.svg" mentorAlt="mentorLarge" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbitallargeWhite.svg" logoAlt="thinkRbitallargeWhite"/> 
         </div>
         <div className="text-[#6637ED] text-sm md:text-xl font-extrabold md:hidden"><a>See More -&gt;</a></div>
+        <Image
+              className="w-fit h-fit max-md:hidden"
+              width={0}
+              height={0}
+              src="blackRainbowLarge.svg"
+              alt="blackRainbowLarge"
+            />
       </div>
       {/*Our Mentors Ends*/}
       {/*Student Success Launchpad*/}
@@ -110,7 +128,15 @@ export default function Institution() {
             <br className="md:hidden"/>
             Launchpad
         </h1>
+        <Image
+              className="w-fit h-fit md:hidden"
+              width={0}
+              height={0}
+              src="blackRainbow.svg"
+              alt="blackRainbow"
+            />
        <div className="absolute right-0">
+
        <Image
               className="w-fit h-fit md:hidden"
               width={0}

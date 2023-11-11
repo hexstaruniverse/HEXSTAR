@@ -3,7 +3,7 @@ export default function MentorWhite(props) {
   return (
     <div className={`${props.className} text-[#1B1B1B] rounded-lg flex-col items-center w-36 h-52 md:w-56 md:h-80 border-[#1B1B1B] border-2`}>
         <Image
-          className={`w-fit h-fit mt-5 rounded-full border-[#D9D9D9] border-4`}
+          className={`w-fit md:w-1/2 h-fit mt-5 rounded-full border-[#D9D9D9] border-4`}
           width={0}
           height={0}
           src={props.mentorImage}
