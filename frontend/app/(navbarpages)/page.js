@@ -137,7 +137,7 @@ export default function Home() {
           src="homeWhiteFrame.svg"
           alt="homeWhiteFrame"
         />
-        <h1 className="text-3xl md:text-7xl  text-center font-extrabold md:pt-10 md:pb-4  py-5 text-[#1B1B1B] ">
+        <h1 className="text-3xl md:text-7xl  text-center font-extrabold md:pt-10 py-5 text-[#1B1B1B] ">
            All Programs
         </h1>
         <h6 className="w-3/4 font-normal text-center max-md:hidden md:text-lg">
@@ -218,7 +218,7 @@ export default function Home() {
         <h6 className="md:text-xl font-semibold md:font-normal text-[#FFFFFF] items-start w-full pl-5 md:pl-10">
               Worlds first fullstack space edtech <br className="md:hidden"/> platform
         </h6>
-        <div className="flex justify-between w-full pl-5 mt-2 md:px-10">
+        <div className="flex justify-between w-full pl-5 mt-2 md:px-16">
           <Image
                 className="w-fit h-fit md:hidden"
                 width={0}
@@ -243,7 +243,33 @@ export default function Home() {
         </div>
       </div>
       {/*Why Hexstar Universe ends*/}
-     
+       {/*Industry Experts */}
+       <div className="relative flex flex-col items-center py-10 mt-5"> 
+        <h1 className="text-3xl  md:text-7xl font-extrabold  text-[#FFFFFF] items-start w-full pl-5  py-5 md:pl-10">
+             Learn from <br className="md:hidden"/> Industry Experts
+        </h1> 
+        <p  className="text-sm md:text-lg font-extralight text-[#FFFFFF] items-start w-full pl-5 md:pl-10">Learn from who you want to be.Learn from top industry practitioner</p>
+       
+        <div className="relative grid items-center grid-cols-2 gap-4 m-4 my-5 md:grid-cols-5 md:gap-12">
+        <Image
+              className="absolute z-[-1] w-fit h-fit max-md:hidden"
+              width={0}
+              height={0}
+              src="mentorFrameLarge.svg"
+              alt="mentorFrameLarge"
+            />
+          <MentorBlack className="flex bg-[#181818] md:hidden"  mentorImage="mentor.svg" mentorAlt="mentor" mentorName="Veronica Moronese" mentorDesignation="space lawyer" logoImage="thinkRbital.svg" logoAlt="thinkRbital"/> 
+          <MentorBlack className="flex bg-[#181818] md:hidden"  mentorImage="mentor.svg" mentorAlt="mentor" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbital.svg" logoAlt="thinkRbital"/> 
+          <MentorBlack className="hidden md:flex bg-[#181818]"  mentorImage="mentorLarge.svg" mentorAlt="mentorLarge" mentorName="Veronica Moronese" mentorDesignation="space lawyer" logoImage="thinkRbitallargeWhite.svg" logoAlt="thinkRbitallargeWhite"/> 
+          <MentorBlack className="hidden md:flex bg-[#181818]"  mentorImage="mentorLarge.svg" mentorAlt="mentorLarge" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbitallargeWhite.svg" logoAlt="thinkRbitallargeWhite"/> 
+          <MentorBlack className="hidden md:flex bg-[#181818]"  mentorImage="mentorLarge.svg" mentorAlt="mentorLarge" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbitallargeWhite.svg" logoAlt="thinkRbitallargeWhite"/> 
+          <MentorBlack className="hidden md:flex bg-[#181818]"  mentorImage="mentorLarge.svg" mentorAlt="mentorLarge" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbitallargeWhite.svg" logoAlt="thinkRbitallargeWhite"/> 
+          <MentorBlack className="hidden md:flex bg-[#181818]"  mentorImage="mentorLarge.svg" mentorAlt="mentorLarge" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbitallargeWhite.svg" logoAlt="thinkRbitallargeWhite"/> 
+        </div>
+        <div className="text-[#6637ED] text-sm md:text-xl font-extrabold md:mt-24"><a>See More -&gt;</a></div>
+      </div>
+      {/*Industry Experts Ends*/} 
+    
     </div>
   )
 }
