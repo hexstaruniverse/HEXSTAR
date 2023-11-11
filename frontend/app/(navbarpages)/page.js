@@ -3,6 +3,7 @@ import Program from '@/components/Program.jsx'
 import MentorBlack from '@/components/MentorBlack.jsx'
 import MentorWhite from '@/components/MentorWhite.jsx'
 import Carousel from '@/components/Carousel.jsx'
+import Review from '@/components/Review.jsx'
 export default function Home() {
   return (
     <div>
@@ -370,6 +371,31 @@ export default function Home() {
       />
       </div>
       {/*Community Ends*/}
+
+      {/*Reviews start*/}
+      <div className="relative flex flex-col items-center py-10 mt-8 overflow-hidden md:pb-32 md:bg-[#FBFBFB]"> 
+            <h1 className="text-3xl  md:text-7xl font-extrabold text-[#FFFFFF]  md:text-[#1B1B1B] mr-auto pl-5">
+                  What  they  says
+            </h1> 
+            <div className="grid items-center w-2/3 gap-10 mt-10 md:w-full md:px-10 md:grid-cols-5">
+            {
+                (() => {
+                  const components = [];
+
+                  for (let i = 0; i < 10; i++) {
+                    components.push(
+                      <Review className=""/>
+                    );
+                  }
+
+                  return components;
+                })()
+              }
+            </div>
+            <button className='px-5 mt-10 capitalize text-center text-xs  text-[#6637ED] border-[#6637ED] border-2 font-bold h-7 md:h-12 md:w-44  rounded-md md:text-lg '>
+                More...
+            </button>
+      </div>
     </div>
   )
 }
