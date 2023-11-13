@@ -3,21 +3,21 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 import {BsFacebook,BsLinkedin} from 'react-icons/bs';
 import {AiFillYoutube,AiFillInstagram} from 'react-icons/ai';
 import {RiTwitterXFill} from 'react-icons/ri';
-
+import Image from 'next/image';
 const footer = () => {
   return (
-    <footer className='h-1/2 mx-4 md:mx-16   text-white'>
-      <div className='capitalize leading-9 mb-16 gap-6 grid md:grid-cols-custom '>
-        <div className='md:col-span-8 mb-5 flex flex-col gap-10 '>
-          <div className="logo flex gap-5">
-            <img src="/logo.svg" className="w-28" alt="hexstar universe" />
-            <img src="/BrandAssest.svg" className='w-32 border-l border-l-[#afadad]' alt="SMT brand Assest"  />
+    <footer className='mx-4 text-white h-1/2 md:mx-16'>
+      <div className='grid gap-6 mb-16 leading-9 capitalize md:grid-cols-custom '>
+        <div className='flex flex-col gap-10 mb-5 md:col-span-8 '>
+          <div className="flex gap-5 logo">
+            <Image width={0} height={0} src="/logo.svg" className="w-28" alt="hexstar universe" />
+            <Image width={0} height={0} src="/BrandAssest.svg" className='w-32 border-l border-l-[#afadad]' alt="SMT brand Assest"  />
           </div>
-          <div className="newsletter flex flex-col relative gap-3 h-24 md:flex-row md:h-10">
+          <div className="relative flex flex-col h-24 gap-3 newsletter md:flex-row md:h-10">
             <input type="email" className='px-4 py-3 rounded-md md:w-80 text-base  bg-transparent border md:rounded-xl border-[#999898]' placeholder='Enter your email'/>
             <button className='flex w-32 absolute right-0 bottom-0 gap-1 items-center justify-center px-3 text-white bg-[#6637ED] h-10 rounded-md  md:static'>Subscribe <AiOutlineArrowRight/></button>
           </div>
-          <div className="social-media flex text-xl gap-10">
+          <div className="flex gap-10 text-xl social-media">
             <BsFacebook/>
             <AiFillInstagram/>
             <BsLinkedin/>
