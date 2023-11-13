@@ -35,7 +35,7 @@ const footer = () => {
           </ul>
         </div>
         <div className=' md:col-span-3'>
-          <h3 className='text-[24px]'><b>learner's club</b></h3>
+          <h3 className='text-[24px]'><b>learner&apos;s club</b></h3>
           <ul className=' text-[#A2A2A2]'>
             <li>free workshops</li>
             <li>blogs</li>
