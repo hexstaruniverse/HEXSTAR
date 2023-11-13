@@ -5,7 +5,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import {useRouter} from 'next/navigation'
 import { ToastContainer, toast } from 'react-toastify';
-
+import Image from 'next/image';
 import 'react-toastify/dist/ReactToastify.css';
 // const response = await fetch(url, {
 //   method: "POST", 
@@ -69,7 +69,7 @@ const Signup = () => {
       backgroundImage: `url('/signup-grid.svg')`,
     }}>
       <div>
-        <img src="/logo2.svg" alt="hexstar universe" className='h-16 md:h-28'/>
+        <Image width={0} height={0} src="/logo2.svg" alt="hexstar universe" className='h-16 w-fit md:h-28'/>
       </div>
       <div className="border border-[#d9d9d9] p-6 rounded-lg bg-[#1f1f1f]  w-3/4 flex flex-col gap-4 md:w-[400px]" >
         <input type="text" className='p-2 bg-transparent border rounded-md' placeholder='Full Name' onChange={(e)=>setFullName(e.target.value)} />
@@ -105,4 +105,4 @@ const Signup = () => {
   )
 }
 
-export default signup
+export default Signup
