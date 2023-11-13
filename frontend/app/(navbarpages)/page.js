@@ -259,7 +259,7 @@ export default function Home() {
               src="mentorFrameLarge.svg"
               alt="mentorFrameLarge"
             />
-          <MentorBlack className="flex bg-[#181818] md:hidden"  mentorImage="mentor.svg" mentorAlt="mentor" mentorName="Veronica Moronese" mentorDesignation="space lawyer" logoImage="thinkRbital.svg" logoAlt="thinkRbital"/> 
+          <MentorBlack className="flex bg-[#181818] md:hidden"  mentorImage="mentor.svg" mentorAlt="mentor" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbital.svg" logoAlt="thinkRbital"/> 
           <MentorBlack className="flex bg-[#181818] md:hidden"  mentorImage="mentor.svg" mentorAlt="mentor" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbital.svg" logoAlt="thinkRbital"/> 
           <MentorBlack className="hidden md:flex bg-[#181818]"  mentorImage="mentorLarge.svg" mentorAlt="mentorLarge" mentorName="Veronica Moronese" mentorDesignation="space lawyer" logoImage="thinkRbitallargeWhite.svg" logoAlt="thinkRbitallargeWhite"/> 
           <MentorBlack className="hidden md:flex bg-[#181818]"  mentorImage="mentorLarge.svg" mentorAlt="mentorLarge" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbitallargeWhite.svg" logoAlt="thinkRbitallargeWhite"/> 
@@ -267,7 +267,7 @@ export default function Home() {
           <MentorBlack className="hidden md:flex bg-[#181818]"  mentorImage="mentorLarge.svg" mentorAlt="mentorLarge" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbitallargeWhite.svg" logoAlt="thinkRbitallargeWhite"/> 
           <MentorBlack className="hidden md:flex bg-[#181818]"  mentorImage="mentorLarge.svg" mentorAlt="mentorLarge" mentorName="Veronica" mentorDesignation="space lawyer" logoImage="thinkRbitallargeWhite.svg" logoAlt="thinkRbitallargeWhite"/> 
         </div>
-        <div className="text-[#6637ED] text-sm md:text-xl font-extrabold md:mt-24"><a>See More -&gt;</a></div>
+        <button className="text-[#6637ED] text-sm md:text-xl font-extrabold md:mt-24"><a>See More -&gt;</a></button>
       </div>
       {/*Industry Experts Ends*/} 
        {/*Community*/} 
@@ -338,13 +338,20 @@ export default function Home() {
             <h6 className="ml-4 md:text-xl font-extrabold mr-auto text-[#FFFFFF]">
                  Be the part of<br/> exceptional journey
             </h6>
-            <button className='px-5 mt-2 capitalize text-xs flex items-center justify-start bg-[#6637ED] text-[#FFFFFF] font-bold h-7 md:h-12 md:w-44  rounded-md md:text-lg '>
+            <button className='px-5 mt-2 capitalize text-xs flex justify-start items-center bg-[#6637ED] text-[#FFFFFF] font-bold h-7 md:h-12 md:w-44  rounded-md md:text-base '>
             <Image
-                className="w-fit h-fit"
+                className="pr-1 md:hidden w-fit h-fit"
                 width={0}
                 height={0}
                 src="discord.svg"
                 alt="discord"
+              />
+            <Image
+                className="pr-1 max-md:hidden w-fit h-fit"
+                width={0}
+                height={0}
+                src="discordLarge.svg"
+                alt="discordLarge"
               />Join Discord</button>
       </div>
       </div>
@@ -356,7 +363,7 @@ export default function Home() {
                 alt="communityGlobeLarge"
       />
       <Image
-                className="w-fit h-fit md:hidden"
+                className="w-fit h-fit mt-[-3rem] md:hidden"
                 width={0}
                 height={0}
                 src="blackRainbow.svg"
@@ -384,7 +391,15 @@ export default function Home() {
 
                   for (let i = 0; i < 10; i++) {
                     components.push(
-                      <Review className=""/>
+                      <Review className="" name="Martina Dmoska" review="I got appointed as a Instructor belioeve me they are building the best space edtech system">
+                        <Image
+                        className=" w-fit h-fit absolute top-[-2rem] left-[-2rem] border-2 border-[#844CFE] rounded-full"
+                        width={0}
+                        height={0}
+                        src="mentor.svg"
+                        alt="mentor"
+                        />
+                        </Review>
                     );
                   }
 

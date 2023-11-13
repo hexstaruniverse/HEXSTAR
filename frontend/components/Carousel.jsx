@@ -2,15 +2,16 @@
 import Slider from 'react-slick';
 
 import Image from 'next/image';
-export default function Carousel({children,className,slidesToShow}) {
+export default function Carousel({children,className,slidesToShow,autoplaySpeed,speed,arrows}) {
     const settings = {
       infinite: true,
-      speed: 500,
+      speed:speed === undefined? 500:speed,
       slidesToShow,
-      arrows:false,
+      cssEase: 'linear',          
+      arrows:arrows === undefined?false:arrows,
       slidesToScroll: 1,
       autoplay: true,        // Enable autoplay
-      autoplaySpeed: 3000,   // Set the autoplay speed in milliseconds (e.g., 3000ms or 3 seconds)
+      autoplaySpeed:autoplaySpeed === undefined? 3000 :autoplaySpeed   // Set the autoplay speed in milliseconds (e.g., 3000ms or 3 seconds)
     };
   
     return (
